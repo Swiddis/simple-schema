@@ -46,14 +46,7 @@ fun constructSampleSchemaObjectDoc(
             name,
             null,
             listOf("a", "b"),
-            "type Author {\n" +
-                "    id: ID!\n" +
-                "    name: String!\n" +
-                "    born: DateTime!\n" +
-                "    died: DateTime\n" +
-                "    nationality: String!\n" +
-                "    books: [Book]\n" +
-                "}"
+            schemaEntityType
         )
     )
 }
@@ -65,7 +58,7 @@ fun constructSchemaEntityTypeRequest(name: String = "test schema entity"): Strin
                 "name" : "$name",
                 "type" : "${SimpleSchemaObjectType.SCHEMA_ENTITY}",
                 "catalog" : ["test"],
-                "content" : "type Author { id: ID! \nname: String! \n born: DateTime! \n died: DateTime \n nationality: String! \n books: [Book] \n }"
+                "content" : "${schemaEntityType.replace("\n", "\\n")}"
                 }
             }
     """.trimIndent()

@@ -60,6 +60,10 @@ internal object SimpleSchemaDomainActions {
         return GetSimpleSchemaDomainResponse(result.simpleSchemaObjectDoc.objectId)
     }
 
+    fun getOntology(request: GetDomainOntologyRequest, user: User?): GetDomainOntologyResponse {
+        TODO("Not yet implemented")
+    }
+
     private fun compile(objectDoc: SimpleSchemaObjectDoc, user: User?) {
         if (objectDoc.type != SimpleSchemaObjectType.SCHEMA_DOMAIN) {
             throw IllegalArgumentException("Attempted to domain-compile a non-domain object doc: " +

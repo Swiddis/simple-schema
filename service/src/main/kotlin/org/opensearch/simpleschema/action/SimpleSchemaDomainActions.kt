@@ -54,5 +54,15 @@ internal object SimpleSchemaDomainActions {
         return GetSimpleSchemaDomainResponse(result.simpleSchemaObjectDoc.objectId, result.simpleSchemaObjectDoc.objectData as SchemaCompilationType)
     }
 
+    fun getOntology(request: GetDomainOntologyRequest, user: User?): GetDomainOntologyResponse {
+        TODO("not implemented")
+    }
 
+    fun getIndex(request: GetDomainIndexRequest, user: User?): GetDomainIndexResponse {
+        TODO("not implemented")
+    }
+
+    fun graphql(request: DomainGraphQLRequest, user: User?): DomainGraphQLResponse {
+        TODO("not implemented")
+    }
 }
